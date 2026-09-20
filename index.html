@@ -9,18 +9,37 @@
 <style>
 /* Gorgyon Receipt System */
 html,body{margin:0;padding:0;background:#FFF7F2;}
-#receipt-page{width:210mm!important;min-height:297mm;box-sizing:border-box;}
+#receipt-page{
+  width:209mm!important;
+  min-height:293mm;
+  box-sizing:border-box;
+  margin:0 auto;
+}
 .receipt-toolbar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:14px 10px 4px;font-family:Inter,system-ui,sans-serif;}
 .receipt-toolbar button{border:0;border-radius:9px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:14px;}
 .receipt-download{background:#1f9d55;color:#fff;}
 .receipt-print{background:#2d2d2d;color:#fff;}
 .receipt-toolbar .status{font-size:12px;color:#6b5148;align-self:center;}
+
 @media print{
   @page{size:A4 portrait;margin:0;}
-  html,body{width:210mm!important;height:297mm!important;background:#fff!important;}
+  html,body{
+    width:210mm!important;
+    height:297mm!important;
+    background:#fff!important;
+  }
   body{overflow:visible!important;}
   #root>div:first-child{padding:0!important;margin:0!important;}
-  #receipt-page{width:210mm!important;min-height:297mm!important;max-width:none!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden!important;}
+  #receipt-page{
+    width:209mm!important;
+    min-height:293mm!important;
+    max-width:none!important;
+    margin:0 auto!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+  }
   .receipt-toolbar{display:none!important;}
   input{outline:none!important;}
 }
